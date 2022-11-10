@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <title>Entre Líneas | Registrarse</title>
+        <meta charset = "utf-8" />
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel = "shortcut icon" type = "image/png" href = "images/logo.png">
+        <link rel = "stylesheet" type = "text/css" href="styles.css">
+    </head>
+    <body>
+        <div id = "contenedor3">
+            <center><img id = "logo3" src="images/logo.png"></center>
+            <form action="registrarse2.html">
+                <section id = "registro">
+                    <div id = "columna1">
+                        <label>Tipo de documento
+                            <select required>
+                                <option>Seleccione</option>
+                                <option>Cédula de ciudadanía</option>
+                                <option>Tarjeta de identidad</option>
+                                <option>Cédula de extranjería</option>
+                                <option>Pasaporte</option>
+                            </select>
+                        </label>
+                        <br>
+                        <label id = "nombres">Nombres
+                            <input id = "nombres" type = "text" placeholder = "Nombres" required/>
+                        </label>
+                        <br>
+                        <label id = "nacimiento">Fecha de nacimiento
+                            <input id = "nacimiento" type = "date" placeholder = "Fecha de nacimiento"/>
+                        </label>
+                        <br>
+                        <label id = "direccion">Dirección
+                            <input id = "direccion" type = "text" placeholder = "Dirección" required/>
+                        </label>
+                        <br>
+                        <label>Departamento
+                            <select>
+                                <option>Seleccione</option>
+                            </select>
+                        </label>
+                        <br>
+                    </div>
+                    <div id = "columna2">
+                        <label id = "numero_documento">Número de documento
+                            <input id = "documento" type = "text" placeholder = "Número de documento" required/>
+                        </label>
+                        <br>
+                        <label id = "apellidos">Apellidos
+                            <input id = "apellidos" type = "text" placeholder = "Apellidos" required/>
+                        </label>
+                        <br>
+                        
+                        <label>Género
+                            <select>
+                                <option>Seleccione</option>
+                                <option>Femenino</option>
+                                <option>Masculino</option>
+                                <option>Otro</option>
+                            </select>
+                        </label>
+                        <br>
+                        <label>País
+                            <select>
+                                <option>Seleccione</option>
+                                <script>
+                                    var headers = new Headers();
+                                    headers.append("X-CSCAPI-KEY", "VHg4d0lpRWhtOFh0MmVqMlZ3MVlmcmxkRmVTNDkwc3lOOFFmRlM4Vw==");
+            
+                                    var requestOptions = {
+                                    method: 'GET',
+                                    headers: headers,
+                                    redirect: 'follow'
+                                    };
+            
+                                    fetch("https://api.countrystatecity.in/v1/countries", requestOptions)
+                                    .then(response => response.text())
+                                    .then(result => console.log(result))
+                                    .catch(error => console.log('error', error));
+                                </script>
+                            </select>
+                        </label>
+                        <br>
+                        <label>Ciudad
+                            <select>
+                                <option>Seleccione</option>
+                            </select>
+                        </label>
+                        <br>
+                    </div>
+                </section>
+                <section id = "registro">
+                    <div id = columna1>
+                        <label id = "correo">Correo electrónico
+                            <input id = "correo" type = "email" placeholder = "Correo electrónico" required/>
+                        </label>
+                        <br>
+                        <label id = "contrasena">Contraseña
+                            <input id = "contrasena" type = "password" minlength="8" placeholder = "Contraseña" required/>
+                        </label>
+                        <br>
+                    </div>
+                    <div id = "columna2"> 
+                        <label id = "usuario">Usuario
+                            <input id = "usuario" type = "text" placeholder = "Usuario" required/>
+                        </label>
+                        <br>
+                        <label id = "confirm_contrasena">Confirmar contraseña
+                            <input id = "confirm_contrasena" type = "password" minlength="8" placeholder = "Confirmar contraseña" required/>
+                        </label>
+                    </div>
+                </section>
+                <label id = "preferencias">Temas literarios de preferencia
+                    <textarea rows = "10" cols = "20" placeholder = "Temas literarios de preferencia"></textarea>
+                </label>
+                <br>
+                <input type = "submit" id = "registrar2" value = "Registrarse" />
+            </form>
+        </div>
+    </body>
+</html>

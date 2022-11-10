@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel = "stylesheet" type = "text/css" href="styles.css">
+  <title>Menu de Navegación</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <img id = "logo2" src="images/logo.png">
+      <nav>
+          <ul>
+            <br><br>
+            <li><a href="#">Libros</a></li>
+            <li><a href="#">Reservas</a></li>
+            <li><a href="#">Carrito</a></li>
+            <li><a href="#">Tarjetas</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Foro</a></li>
+            <li><a href="#">Mi perfil</a></li>
+            <li><a href="#">Salir</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+    <div id = "contenedor4">
+        <title> Editar perfil</title>
+        <h2>Editar perfil</h2>
+        <form action="registrarse.html">
+            <section id = "registro">
+                <div id = "columna1">
+                        <select required>
+                            <option>Cédula de ciudadania</option>
+                            <option>Tarjeta de identidad</option>
+                            <option>Cédula de extranjería</option>
+                            <option>Pasaporte</option>
+                        </select>
+                    <br>
+                        <input id = "nombres" type = "text" placeholder = "Nombres" required/>
+                    <br>
+                        <input id = "nacimiento" type = "date" placeholder = "Fecha de nacimiento"/>
+                    <br>
+                        <input id = "direccion" type = "text" placeholder = "Dirección" required/>
+                    <br>
+                        <select>
+                            <option>Risaralda</option>
+                        </select>
+                    <br>
+                </div>
+                <div id = "columna2">
+                        <input id = "documento" type = "text" placeholder = "Número de documento" required/>
+                    <br>
+                        <input id = "apellidos" type = "text" placeholder = "Apellidos" required/>
+                    <br>
+                        <select>
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                            <option>Otro</option>
+                        </select>
+                    <br>
+                        <select>
+                            <option>Colombia</option>
+                            
+                        </select>
+                    <br>
+                        <select>
+                            <option>La Virginia</option>
+                        </select>
+                    <br>
+                </div>
+                <div id = "columna3">
+                    <input id = "Correo" type = "email" placeholder = "Correo" required/>
+                <br>
+                    <input id = "Usuario" type = "text" placeholder = "Usuario" required/>
+                <br>
+                    <textarea rows = "10" cols = "20" placeholder = "Temas literarios de preferencia"></textarea>
+            </div>
+            </section>
+            <br>
+            <input type = "submit" id = "Modificar" value = "Modificar" />
+        </form>
+    </div>
+</body>
+</html>
